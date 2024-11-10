@@ -6,7 +6,7 @@
 /*   By: kinamura <kinamura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 18:07:49 by kinamura          #+#    #+#             */
-/*   Updated: 2024/11/10 18:29:13 by kinamura         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:36:16 by kinamura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_sends(const pid_t pid, char *str)
 {
 	while (*str)
 	{
-		ft_send_char(pid, *str);
+		ft_sendc(pid, *str);
 		str++;
 	}
 }
