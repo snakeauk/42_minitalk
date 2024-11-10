@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	CLIENT_H
+#ifndef CLIENT_H
 # define CLIENT_H
 
-#include "libft.h"
-#include "ft_printf.h"
-#include <unistd.h>
-#include <stdlib.h>
-#include <signal.h>
+# include "ft_printf.h"
+# include "libft.h"
+# include <signal.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 void	ft_sendc(const pid_t pid, char c);
 void	ft_sends(const pid_t pid, char *str);

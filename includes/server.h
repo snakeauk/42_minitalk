@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	SERVER_H
+#ifndef SERVER_H
 # define SERVER_H
 
-#include "libft.h"
-#include "ft_printf.h"
-
-#include <unistd.h>
-#include <signal.h>
-#include <stdio.h>
+# include "ft_printf.h"
+# include "libft.h"
+# include <signal.h>
+# include <stdio.h>
+# include <unistd.h>
 
 void	signal_handler(int signum);
 int		main(void);
