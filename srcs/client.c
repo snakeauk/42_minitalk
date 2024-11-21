@@ -44,9 +44,14 @@ int	main(int argc, char **argv)
 	if (argc != 3)
 	{
 		ft_dprintf(STDERR_FILENO, "Usage: %s <PID> <message>\n", argv[0]);
-		return (EXIT_FAILURE);
+		return (EXIT_SUCCESS);
 	}
 	pid = ft_atoi(argv[1]);
+	if (pid <= 3 || pid <= 32768)
+	{
+		ft_dprintf(STDERR_FILENO, "Error: Invalid PID\n");
+		return (EXIT_SUCCESS);
+	}
 	ft_sends(pid, argv[2]);
 	return (EXIT_SUCCESS);
 }
