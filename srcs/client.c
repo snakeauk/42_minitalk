@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kinamura <kinamura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 18:07:49 by kinamura          #+#    #+#             */
-/*   Updated: 2024/12/22 03:35:32 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/12/22 03:44:49 by kinamura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	main(int argc, char **argv)
 		ft_dprintf(STDERR_FILENO, "Usage: ./client <PID> <message>\n");
 		return (EXIT_FAILURE);
 	}
-	pid = atoi(argv[1]);
+	pid = ft_atoi(argv[1]);
 	if (pid <= 3)
 	{
 		ft_dprintf(STDERR_FILENO, "Error: Invalid PID\n");
