@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kinamura <kinamura@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 18:08:10 by kinamura          #+#    #+#             */
-/*   Updated: 2024/12/21 02:19:52 by kinamura         ###   ########.fr       */
+/*   Updated: 2024/12/22 03:33:21 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdio.h>
 # include <unistd.h>
 
-void	signal_handler(int signum);
 int		main(void);
+void	handle_signal(int sig, siginfo_t *info, void *context);
 
 #endif

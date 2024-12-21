@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 18:07:49 by kinamura          #+#    #+#             */
-/*   Updated: 2024/12/22 03:21:55 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/12/22 03:35:32 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	main(int argc, char **argv)
 	if (pid <= 3)
 	{
 		ft_dprintf(STDERR_FILENO, "Error: Invalid PID\n");
-		return(EXIT_FAILURE);
+		return (EXIT_FAILURE);
 	}
 	else if (kill(pid, 0) == -1)
 	{
