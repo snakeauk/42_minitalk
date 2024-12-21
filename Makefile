@@ -9,8 +9,8 @@ RM			=	rm -rf
 
 # libft
 LIBFT		=	libft
-LIBFT_A		=	$(LIBFT).a
 LIBFT_DIR	=	./$(LIBFT)
+LIBFT_A     =	$(LIBFT_DIR)/$(LIBFT).a
 
 # srcs
 SRCS_DIR	=	./srcs
@@ -54,16 +54,16 @@ all: $(LIBFT_A) $(CLIENT_NAME) $(SERVER_NAME)
 
 $(CLIENT_NAME): $(CLIENT_OBJS) $(LIBFT_A)
 	@echo "$(BOLD)$(LIGHT_BLUE)Compiling $(CLIENT_NAME)...$(RESET)"
-	@$(CC) $(CFLAGS) $(INCLUDES) $(CLIENT_OBJS) $(LIBFT_DIR)/$(LIBFT_A) -o $(CLIENT_NAME)
-	@echo "$(BOLD)$(LIGHT_BLUE)$(CLIENT_NAME) compiled successfully!$(RESET)"
+	@$(CC) $(CFLAGS) $(INCLUDES) $(CLIENT_OBJS) $(LIBFT_A) -o $(CLIENT_NAME)
+	@echo "$(BOLD)$(LIGHT_BLUE)$(CLIENT_NAME) created successfully!$(RESET)"
 
 $(SERVER_NAME): $(SERVER_OBJS) $(LIBFT_A)
 	@echo "$(BOLD)$(LIGHT_BLUE)Compiling $(SERVER_NAME)...$(RESET)"
-	@$(CC) $(CFLAGS) $(INCLUDES) $(SERVER_OBJS) $(LIBFT_DIR)/$(LIBFT_A) -o $(SERVER_NAME)
-	@echo "$(BOLD)$(LIGHT_BLUE)$(SERVER_NAME) compiled successfully!$(RESET)"
+	@$(CC) $(CFLAGS) $(INCLUDES) $(SERVER_OBJS) $(LIBFT_A) -o $(SERVER_NAME)
+	@echo "$(BOLD)$(LIGHT_BLUE)$(SERVER_NAME) created successfully!$(RESET)"
 
 $(LIBFT_A):
-	@echo "$(BOLD)$(LIGHT_BLUE)Compiling libft...$(RESET)"
+	@echo "$(BOLD)$(LIGHT_BLUE)Compiling $(LIBFT)...$(RESET)"
 	@$(MAKE) -C $(LIBFT_DIR)
 
 %.o: %.c
