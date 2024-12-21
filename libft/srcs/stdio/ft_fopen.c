@@ -6,11 +6,11 @@
 /*   By: kinamura <kinamura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 21:15:14 by kinamura          #+#    #+#             */
-/*   Updated: 2024/11/08 21:50:58 by kinamura         ###   ########.fr       */
+/*   Updated: 2024/12/22 01:49:50 by kinamura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "libft.h"
 
 int	ft_fopen(char *filename, const char *mode)
 {
@@ -26,8 +26,8 @@ int	ft_fopen(char *filename, const char *mode)
 	else if (ft_strncmp(mode, "r", 1) == 0 && ft_strlen(mode) == 1)
 		fd = open(filename, O_RDONLY);
 	else
-		ft_dprintf(STDERR_FILENO, "Invalid file operation mode.\n");
+		write(STDERR_FILENO, "Invalid file operation mode.\n", 29);
 	if (fd < 0)
-		ft_dprintf(STDERR_FILENO, "%s: No such file or directory\n", filename);
+		perror("Error");
 	return (fd);
 }

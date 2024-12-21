@@ -6,7 +6,7 @@
 /*   By: kinamura <kinamura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:45:34 by kinamura          #+#    #+#             */
-/*   Updated: 2024/11/08 21:06:13 by kinamura         ###   ########.fr       */
+/*   Updated: 2024/12/21 23:54:55 by kinamura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 // stdio
-void				ft_exit_message(int status, const char *format, ...);
 int					ft_fopen(char *filename, const char *mode);
 size_t				ft_isize(int n, int base);
 void				ft_putchar_fd(char c, int fd);
