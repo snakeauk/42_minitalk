@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kinamura <kinamura@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 18:07:49 by kinamura          #+#    #+#             */
-/*   Updated: 2024/12/22 03:06:44 by kinamura         ###   ########.fr       */
+/*   Updated: 2024/12/22 03:15:33 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,19 +62,19 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		ft_dprintf(STDERR_FILENO, "Usage: ./client <PID> <message>");
+		ft_dprintf(STDERR_FILENO, "Usage: ./client <PID> <message>\n");
 		return (EXIT_FAILURE);
 	}
 	pid = atoi(argv[1]);
 	if (pid <= 3)
 	{
-		ft_dprintf(STDERR_FILENO, "Error: Invalid PID");
-		exit(EXIT_FAILURE);
+		ft_dprintf(STDERR_FILENO, "Error: Invalid PID\n");
+		return(EXIT_FAILURE);
 	}
 	else if (kill(pid, 0) == -1)
 	{
-		ft_dprintf(STDERR_FILENO, "Error: non-existent PID");
-		exit(EXIT_FAILURE);
+		ft_dprintf(STDERR_FILENO, "Error: non-existent PID\n");
+		return (EXIT_FAILURE);
 	}
 	signal(SIGUSR1, handle_ack);
 	ft_sends(pid, argv[2]);
