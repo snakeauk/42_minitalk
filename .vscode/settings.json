@@ -1,6 +1,11 @@
 {
     "files.associations": {
-        "*.embeddedhtml": "html",
-        "libft.h": "c"
-    }
+		"*.embeddedhtml": "html",
+		"libft.h": "c",
+		"server.h": "c",
+		"unistd.h": "c",
+		"stdio.h": "c",
+		"signal.h": "c",
+		"ft_printf.h": "c"
+	}
 }

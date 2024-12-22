@@ -84,6 +84,8 @@ fclean:
 	@$(RM) $(CLIENT_OBJS) $(SERVER_OBJS) $(CLIENT_NAME) $(SERVER_NAME)
 	@echo "$(BOLD)$(LIGHT_BLUE)Full clean complete!$(RESET)"
 
+bonus: all
+
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
