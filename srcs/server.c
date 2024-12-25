@@ -6,7 +6,7 @@
 /*   By: kinamura <kinamura@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 18:07:53 by kinamura          #+#    #+#             */
-/*   Updated: 2024/12/22 18:19:41 by kinamura         ###   ########.fr       */
+/*   Updated: 2024/12/25 20:58:24 by kinamura         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,7 @@ void	signal_handler(int sig, siginfo_t *info, void *context)
 	if (bit == 8)
 	{
 		if (c == '\0')
-		{
-			ft_fputs("", STDOUT_FILENO);
 			kill(info->si_pid, SIGUSR1);
-		}
 		else
 			ft_fputc(c, STDOUT_FILENO);
 		bit = 0;

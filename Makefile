@@ -6,6 +6,7 @@ CLIENT_NAME	=	client
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 RM			=	rm -rf
+MAKEFLAGS	+=	--no-print-directory
 
 # libft
 LIBFT		=	libft
